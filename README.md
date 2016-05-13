@@ -21,5 +21,5 @@ The following two-step should be all that is needed:
 docker run -p 8888:8888 --rm rpy2/odsc-pdaibp-slides
 ```
 
-2. Open a web browser and point it to [http://localhost:8888]
+2. Open a web browser and point it to [http://localhost:8888/]
 
