@@ -54,8 +54,8 @@ RUN \
   R -e 'install.packages(sub("(.+)\\\\n","\\1", scan("rpacks.txt", "character")), repos="http://cran.cnr.Berkeley.edu")' && \
   rm rpacks.txt
 
-#COPY Pothole_Repair_Requests.csv /notebooks/
-#COPY notebooks/potholes.ipynb /notebooks/
+#COPY notebooks/finefoods.db /notebooks/
+#COPY notebooks/slides.ipynb /notebooks/
 
 # Run dev version of rpy2
 RUN \
