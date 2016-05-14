@@ -72,11 +72,12 @@ RUN \
   rm -rf /root/.cache
   
 
-COPY finefoods_to_sqlite.py /opt/data
+COPY finefoods_to_sqlite.py /opt/data/finefoods_to_sqlite.py
+
 RUN \
-  mkdir -p /opt/data && \
   cd /opt/data && \
-  wget http://snap.stanford.edu/data/finefoods.txt.gz && \
+  wget -q --show-progress --progress=bar:force \
+       http://snap.stanford.edu/data/finefoods.txt.gz && \
   python3 finefoods_to_sqlite.py && \
   rm finefoods.txt.gz
 
