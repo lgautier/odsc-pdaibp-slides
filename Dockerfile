@@ -38,13 +38,13 @@ RUN \
   pip3 --no-cache-dir install wheel --upgrade && \
   pip3 --no-cache-dir install numpy pandas sphinx jinja2 jupyter notebook && \
   pip3 --no-cache-dir install bokeh && \
+  pip3 --no-cache-dir install sqlalchemy && \
   rm -rf /root/.cache
 
 RUN \
   echo "broom\n\
         dplyr\n\
         hexbin\n\
-        GGally\n\
         glmnet\n\
         ggplot2\n\
         gridExtra\n\
