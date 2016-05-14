@@ -73,8 +73,8 @@ RUN \
   
 
 COPY finefoods_to_sqlite.py /opt/data
-RUN \
-  cd opt/data && \
+RUN \  
+  cd /opt/data && \
   wget http://snap.stanford.edu/data/finefoods.txt.gz && \
   python3 finefoods_to_sqlite.py && \
   rm finefoods.txt.gz
