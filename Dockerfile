@@ -72,10 +72,12 @@ RUN \
   rm -rf /root/.cache
   
 
+COPY finefoods_to_sqlite.py /opt/data
 RUN \
-  wget http://snap.stanford.edu/data/finefoods.txt.gz /opt/data/
-
-
+  wget http://snap.stanford.edu/data/finefoods.txt.gz /opt/data/ && \
+  cd opt/data && \
+  python3 finefoods_to_sqlite.py && \
+  rm finefoods.txt.gz
 
 ENV SHELL /bin/bash
 ENV NB_USER jupyteruser
