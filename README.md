@@ -23,3 +23,9 @@ docker run -p 8888:8888 --rm rpy2/odsc-pdaibp-slides
 
 2. Open a web browser and point it to [http://localhost:8888/]
 
+## Notes
+
+### Dataset
+
+J. McAuley and J. Leskovec. From amateurs to connoisseurs: modeling the evolution of user expertise through online reviews. WWW, 2013.
+[http://snap.stanford.edu/data/web-FineFoods.html]

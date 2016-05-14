@@ -39,6 +39,14 @@ RUN \
   pip3 --no-cache-dir install numpy pandas sphinx jinja2 jupyter notebook && \
   pip3 --no-cache-dir install bokeh && \
   pip3 --no-cache-dir install sqlalchemy && \
+  rm -rf /root/.cache && \
+  wget https://github.com/numba/llvmlite/archive/v0.10.0.zip && \
+  unzip v0.10.0.zip && \
+  cd llvmlite-0.10.0 && \
+  LLVM_CONFIG=`which llvm-config-3.7` python3 setup.py install && \
+  cd .. && rm -rf llvmite-0.10.0 && rm v0.10.0.zip && \
+  pip3 --no-cache install numba && \
+  pip3 --no-cache install findspark && \
   rm -rf /root/.cache
 
 RUN \
@@ -63,15 +71,11 @@ RUN \
         https://bitbucket.org/rpy2/rpy2/get/default.tar.gz && \
   rm -rf /root/.cache
   
+
 RUN \
-  wget https://github.com/numba/llvmlite/archive/v0.10.0.zip && \
-  unzip v0.10.0.zip && \
-  cd llvmlite-0.10.0 && \
-  LLVM_CONFIG=`which llvm-config-3.7` python3 setup.py install && \
-  cd .. && rm -rf llvmite-0.10.0 && rm v0.10.0.zip && \
-  pip3 --no-cache install numba && \
-  pip3 --no-cache install findspark && \
-  rm -rf /root/.cache
+  wget http://snap.stanford.edu/data/finefoods.txt.gz /opt/data/
+
+
 
 ENV SHELL /bin/bash
 ENV NB_USER jupyteruser
