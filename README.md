@@ -13,7 +13,7 @@ Otherwise check [https://www.docker.com/]
 
 ### Starting
 
-The following two-step should be all that is needed:
+The following two-step process should be all that is needed:
 
 1. Open a terminal and run:
 
