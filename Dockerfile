@@ -63,9 +63,6 @@ RUN \
   R -e 'install.packages(sub("(.+)\\\\n","\\1", scan("rpacks.txt", "character")), repos="http://cran.cnr.Berkeley.edu")' && \
   rm rpacks.txt
 
-#COPY notebooks/finefoods.db /notebooks/
-#COPY notebooks/slides.ipynb /notebooks/
-
 # Run dev version of rpy2
 RUN \
   pip3 --no-cache-dir install \
@@ -106,5 +103,6 @@ WORKDIR /home/$NB_USER/work
 EXPOSE 8888
 
 USER $NB_USER
+COPY pragmatic_polyglot.ipynb /home/$NB_USER/work
 
 CMD jupyter notebook --no-browser
