@@ -57,6 +57,7 @@ RUN \
         ggplot2\n\
         gridExtra\n\
         lme4\n\
+        plotly\n\
         RSQLite\n\
         svglite\n\
         tidyr" > rpacks.txt && \
