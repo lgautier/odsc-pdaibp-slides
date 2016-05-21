@@ -1,7 +1,7 @@
 # Polyglot programming is being pragmatic
 ([ODSC-Boston](https://www.odsc.com/boston/) 2016)
 
-The conference version of an edible arrangement: a docker container
+The conference version of edible art: a docker container
 to reproduce all code in an interactive notebook.
 
 **The slides are not yet here, and the notebook is not final. The docker container is though. May be.**
