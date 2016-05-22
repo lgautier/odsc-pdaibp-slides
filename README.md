@@ -4,7 +4,7 @@
 The conference version of edible art: a docker container
 to reproduce all code in an interactive notebook.
 
-**The slides are at (github still building at the time of writing):
+**The slides are at:
 [http://lgautier.github.io/odsc-pdaibp-slides/]**
 
 ## Setup
