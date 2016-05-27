@@ -1,4 +1,4 @@
-# Polyglot programming is being pragmatic
+# Polyglot data analysis is being pragmatic
 ([ODSC-Boston](https://www.odsc.com/boston/) 2016)
 
 The conference version of edible art: a docker container
